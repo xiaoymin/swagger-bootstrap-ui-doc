@@ -1,8 +1,7 @@
 <template>
     <div class="gitalk-container">
-        <div class="wg" style="color: #c3c3c3;">
+        <div class="self-container" style="color: #c3c3c3;">
             <span id="busuanzi_container_page_pv" style="display:none;">被围观 <span id="busuanzi_value_page_pv" style="color: #608fe8;"></span> 人次</span>
-            <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
         </div>
         <div id="gitalk-container"></div>
     </div>
@@ -14,6 +13,17 @@
             return {};
         },
         mounted() {
+            //baidu
+            let bd= document.querySelector('.self-container');
+            let bds=document.createElement('script');
+            bds.src="/js/baidu.js";
+            bd.appendChild(bds);
+            // buanzi
+            let busuanziScript=document.createElement("script");
+            busuanziScript.src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js";
+            bd.appendChild(busuanziScript);
+
+            //gitalk
             let body = document.querySelector('.gitalk-container');
             let script = document.createElement('script');
             script.src = 'https://unpkg.com/gitalk/dist/gitalk.min.js';
@@ -46,8 +56,3 @@
         },
     };
 </script>
-
-作者：YanceyOfficial
-链接：https://juejin.im/post/5c9e30fb6fb9a05e1c4cecf6
-来源：掘金
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
