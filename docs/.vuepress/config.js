@@ -49,6 +49,7 @@ module.exports = {
                   // 这里的'/' 指的是 docs文件夹路径
                   // [以 '/' 结尾的默认指向该路径下README.md文件]
                   { text: '指南', link: '/guide/' },
+                  { text: '更新日志', link: '/changelog/' },
                   {
                       text: '代码托管',
                       items: [
@@ -60,7 +61,8 @@ module.exports = {
               // 侧边栏菜单( 一个模块对应一个菜单形式 )
               sidebar:{
                   // 打开guide主页链接时生成下面这个菜单
-                  '/guide/':genGuideSideBar(true)
+                  '/guide/':genGuideSideBar(true),
+                  "/changelog/":genChangeLogSideBar()
               }
           },
           '/en/':{
@@ -167,6 +169,47 @@ function genGuideSideBar(language) {
                 "donate",
                 "starts"
             ]
+        }
+    ]
+
+}
+
+/***
+ * 更新日志
+ */
+function genChangeLogSideBar() {
+    return [
+        {
+            title:"发布日志",
+            collapsable:false,
+            children:["2019-04-08-swagger-bootstrap-ui-1.9.2-issue",
+                "2019-03-11-swagger-bootstrap-ui-1.9.1-issue",
+                "2019-02-25-swagger-bootstrap-ui-1.9.0-issue",
+                "2019-01-11-swagger-bootstrap-ui-1.8.9-issue",
+                "2018-12-17-swagger-bootstrap-ui-1.8.8-issue",
+                "2018-11-12-swagger-bootstrap-ui-1.8.7-issue",
+                "2018-10-31-swagger-bootstrap-ui-1.8.6-issue",
+                "2018-10-16-swagger-bootstrap-ui-1.8.5-issue",
+                "2018-09-25-swagger-bootstrap-ui-1.8.4-issue",
+                "2018-09-17-swagger-bootstrap-ui-1.8.3-issue",
+                "2018-08-26-swagger-bootstrap-ui-1.8.2-issue",
+                "2018-08-14-swagger-bootstrap-ui-1.8.1-issue",
+                "2018-08-10-swagger-bootstrap-ui-1.8.0-issue",
+                "2018-08-06-swagger-bootstrap-ui-1.7.9-issue",
+                "2018-08-03-swagger-bootstrap-ui-1.7.8-issue",
+                "2018-07-25-swagger-bootstrap-ui-1.7.7-issue",
+                "2018-07-18-swagger-bootstrap-ui-1.7.6-issue",
+                "2018-07-16-swagger-bootstrap-ui-1.7.5-issue",
+                "2018-04-28-swagger-bootstrap-ui-1.7.3-issue",
+                "2018-01-20-swagger-bootstrap-ui-1.7.2-issue",
+                "2017-12-18-swagger-bootstrap-ui-1.7-issue",
+                "2017-09-06-swagger-bootstrap-ui-1.6-issue",
+                "2017-09-01-swagger-bootstrap-ui-1.5-issue",
+                "2017-07-11-swagger-bootstrap-ui-1.4-issue",
+                "2017-07-05-swagger-bootstrap-ui-1.3-issue",
+                "2017-05-14-swagger-bootstrap-ui-1.2-issue",
+                "2017-04-27-swagger-bootstrap-ui-1.1-issue",
+                "2017-04-19-swagger-bootstrap-ui-open"]
         }
     ]
 
