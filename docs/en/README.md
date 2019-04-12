@@ -8,17 +8,6 @@
 
 ## Project address
 
-**Gitee**:https://gitee.com/xiaoym/swagger-bootstrap-ui
+**Gitee**:[https://gitee.com/xiaoym/swagger-bootstrap-ui](https://gitee.com/xiaoym/swagger-bootstrap-ui)
 
-**GitHub**:https://github.com/xiaoymin/Swagger-Bootstrap-UI
-
-
-<script src='https://gitee.com/xiaoym/swagger-bootstrap-ui/widget_preview'></script>
-<style>
-.pro_name a{color: #4183c4;}
-.osc_git_title{background-color: #fff;}
-.osc_git_box{background-color: #fff;}
-.osc_git_box{border-color: #E3E9ED;}
-.osc_git_info{color: #666;}
-.osc_git_main a{color: #9B9B9B;}
-</style>
+**GitHub**:[https://github.com/xiaoymin/Swagger-Bootstrap-UI](https://github.com/xiaoymin/Swagger-Bootstrap-UI)

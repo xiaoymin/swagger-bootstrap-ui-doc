@@ -1,3 +1,5 @@
+# Settings
+
 The personalization function is the personalized setting function provided by SwaggerBootstrapUi for its own Ui features, including:
 
 - Turn on request parameter caching

@@ -79,7 +79,7 @@ module.exports = {
                   // 单项 text：显示文字，link：指向链接
                   // 这里的'/' 指的是 docs文件夹路径
                   // [以 '/' 结尾的默认指向该路径下README.md文件]
-                  { text: 'Guide', link: '/guide/' },
+                  { text: 'Guide', link: '/en/' },
                   {
                       text: 'Code',
                       items: [
@@ -91,7 +91,7 @@ module.exports = {
               // 侧边栏菜单( 一个模块对应一个菜单形式 )
               sidebar:{
                   // 打开guide主页链接时生成下面这个菜单
-                  '/guide/':genGuideSideBar(false)
+                  '/en/':genGuideSideBar(false)
               }
           }
 

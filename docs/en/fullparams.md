@@ -1,3 +1,5 @@
+# Global Params
+
 SwaggerBootstrapUi provides global parameter settings based on UI temporary settings, such as background global token parameters.
 
 Currently, the global parameter function mainly provides two types of parameters: query (form), header (request header)

@@ -1,3 +1,5 @@
+# Authorize
+
 The Authorize function is set by the backend configuration similar to the JWT and other permission configurations. You can configure parameters such as tokens globally.
 
 ![](images/auth.png)

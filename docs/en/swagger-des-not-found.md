@@ -1,3 +1,4 @@
+# Description not displayed
 Whether in the previous version of SwaggerBootstrapUi, or in the 1.8.9 version of SwaggerBootstrapUi, the new feature field comment is displayed line by line, many friends will ask if the comment is not displayed on the UI document.
 
 The function of 1.8.9 is shown below.：

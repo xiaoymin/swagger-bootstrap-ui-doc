@@ -1,3 +1,5 @@
+# Spring MVC 404
+
 There are two cases in the SpringMvc document exception:
 
 - doc.html Open prompt 404

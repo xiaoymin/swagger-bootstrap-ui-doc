@@ -1,3 +1,5 @@
+# Spring Boot 404
+
 By default, you do not need to add this configuration to access
 
 Many friends can't access the doc.html interface after using SpringBoot integration swagger-bootstrap-ui. At this point, you may need to implement SpringBoot's WebMvcConfigurer interface, add related ResourceHandler, the code is as follows：

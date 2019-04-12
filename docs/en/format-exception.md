@@ -1,3 +1,5 @@
+# NumberFormatException for Springfox-swagger version 2.9.2
+
 Many friends will encounter a NumberFormatException after upgrading Springfox-Swagger to version 2.9.2.
 
 **java.lang.NumberFormatException: For input string: ""**

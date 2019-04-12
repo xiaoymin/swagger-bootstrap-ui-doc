@@ -1,3 +1,5 @@
+# Background
+
 Probably in April 2017, the entire development method of our team decided to use the separation of front and back ends to cooperate and develop. The whole technical solution at the time of separation was also responsible for sorting and exploring how to make the whole team develop more efficiently. I completed my own work. From the beginning of jsonp, to the back nginx reverse proxy, I also got a lot of things here, and also wrote some related blog summary.
 
 But the most troublesome thing is how the front and back end docked for the interface. At that time, I found a lot of solutions. I started using apidocs. Some of them are similar to writing java comments. It is good to use, but it is not generated online. After the document is written, a separate command is required to generate a document. It is very troublesome, and then it is abandoned.
