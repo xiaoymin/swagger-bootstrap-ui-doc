@@ -6,7 +6,8 @@ module.exports = {
         // 增加一个自定义的 favicon(网页标签的图标)
         // 这里的 '/' 指向 docs/.vuepress/public 文件目录
         // 即 docs/.vuepress/public/img/geass-bg.ico
-        ['link', { rel: 'icon', href: '/img/geass-bg.ico' }],
+        ['link', { rel: 'icon', href: '/img/sbu_favicon.ico' }],
+        ['meta', { name:'keywords',content:'swagger-bootstrap-ui,swagger-bootstrap-ui 指南,swagger-bootstrap-ui 说明,swagger-bootstrap-ui 排序,swagger-bootstrap-ui 增强,swagger-bootstrap-ui 导出markdown' }]
     ],
     base: '', // 这是部署到github相关的配置
     locales: {
@@ -15,12 +16,12 @@ module.exports = {
         '/': {
             lang: 'zh-CN',
             title: 'swagger-bootstrap-ui',
-            description: 'swagger-bootstrap-ui 说明'
+            description: 'swagger-bootstrap-ui 指南'
         },
         '/en/': {
             lang: 'en-US', // 将会被设置为 <html> 的 lang 属性
             title: 'swagger-bootstrap-ui',
-            description: 'Vue-powered Static Site Generator'
+            description: 'swagger-bootstrap-ui Guide'
         }
 
     },
@@ -64,13 +65,13 @@ module.exports = {
           },
           '/en/':{
               label: 'English',
-              selectText: '选择语言',
-              editLinkText: '在 GitHub 上编辑此页',
-              lastUpdated: '上次更新',
+              selectText: 'Language',
+              editLinkText: 'Edit this page on GitHub',
+              lastUpdated: 'Last Updated',
               serviceWorker: {
                   updatePopup: {
-                      message: "发现新内容可用",
-                      buttonText: "刷新"
+                      message: "New content is available.",
+                      buttonText: "Refresh"
                   }
               },
               // 顶部导航栏
@@ -78,9 +79,9 @@ module.exports = {
                   // 单项 text：显示文字，link：指向链接
                   // 这里的'/' 指的是 docs文件夹路径
                   // [以 '/' 结尾的默认指向该路径下README.md文件]
-                  { text: '指南', link: '/guide/' },
+                  { text: 'Guide', link: '/guide/' },
                   {
-                      text: '代码托管',
+                      text: 'Code',
                       items: [
                           { text: 'GitHub', link: 'https://github.com/xiaoymin/Swagger-Bootstrap-UI' },
                           { text: 'Gitee', link: 'https://gitee.com/xiaoym/swagger-bootstrap-ui' }
@@ -111,12 +112,12 @@ function genGuideSideBar(language) {
             children: ["", "backgroupd", "useful", "ui-fet", "ui-images"]
         },
         {
-            title: language ? "特点" : "Core",
+            title: language ? "特点" : "Feature",
             collapsable: false,
             children: ["ui-style", "offline-md", "fullsearch", "fullparams", "authorize","enh-func","settings"]
         },
         {
-            title: language ? "默认规则说明" : "Plugin",
+            title: language ? "默认规则说明" : "Default Rule",
             collapsable: false,
             children: [
                 "fieldSort",
@@ -127,7 +128,7 @@ function genGuideSideBar(language) {
             ]
         },
         {
-            title: language ? "前后端分离" : "Pluxgin",
+            title: language ? "前后端分离" : "Front and back end",
             collapsable: false,
             children: [
                 'ui-front',
