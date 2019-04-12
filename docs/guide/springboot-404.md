@@ -1,3 +1,5 @@
+# SpringBoot访问doc.html页面404
+
 默认情况下并不需要添加此配置即可访问
 
 很多朋友在使用SpringBoot集成swagger-bootstrap-ui后，都无法访问doc.html界面，此时，你可能需要实现SpringBoot的`WebMvcConfigurer`接口，添加相关的ResourceHandler,代码如下：

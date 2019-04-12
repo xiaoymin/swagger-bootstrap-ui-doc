@@ -1,3 +1,5 @@
+# SpringMvc访问页面404
+
 SpringMvc中文档出现异常一般分2种情况：
 
 - doc.html打开提示404

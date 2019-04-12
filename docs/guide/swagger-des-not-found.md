@@ -1,3 +1,5 @@
+# Swagger字段属性说明不显示
+
 不管是在SwaggerBootstrapUi以前的版本中,还是在SwaggerBootstrapUi的1.8.9版本发布新功能字段注释逐行显示时,很多朋友都会问为啥自己的UI文档上不显示注释.
 
 1.8.9的功能展示如下图：

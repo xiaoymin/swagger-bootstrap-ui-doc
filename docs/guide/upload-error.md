@@ -1,3 +1,5 @@
+# 文件上传不显示上传选择文本域
+
 在使用SwaggerBootstrapUi的朋友经常询问的一个问题,为什么上传参数file对象不显示file文本域,而是普通文本,如下图：
 
 ![](/images/file-error.jpeg)

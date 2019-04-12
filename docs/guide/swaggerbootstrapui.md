@@ -1,3 +1,5 @@
+# SwaggerBootstrapUi说明
+
 有了以上Springfox-Swagger的两个接口，就可以根据这2个接口来生成页面了，这里有一个前提，为什么可以根据这个来生成，因为Springfox-Swagger给出的两个接口地址是固定的，所以写这套UI也能得到通用.
 
 swagger-bootstrap-ui主要使用到的前端技术栈主要包括：

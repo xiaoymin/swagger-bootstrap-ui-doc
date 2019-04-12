@@ -15,7 +15,7 @@ module.exports = {
         '/': {
             lang: 'zh-CN',
             title: 'swagger-bootstrap-ui',
-            description: 'Vue 驱动的静态网站生成器'
+            description: 'swagger-bootstrap-ui 说明'
         },
         '/en/': {
             lang: 'en-US', // 将会被设置为 <html> 的 lang 属性
@@ -28,8 +28,6 @@ module.exports = {
         lineNumbers: false // 代码块显示行号
     },
     themeConfig: {
-        repo: 'xiaoymin/swagger-bootstrap-ui-doc',
-        editLinks: true,
         sidebarDepth: 4, // e'b将同时提取markdown中h2 和 h3 标题，显示在侧边栏上。
         lastUpdated: 'Last Updated' ,// 文档更新时间：每个文件git最后提交的时间,
         locales:{
@@ -132,6 +130,7 @@ function genGuideSideBar(language) {
             title: language ? "前后端分离" : "Pluxgin",
             collapsable: false,
             children: [
+                'ui-front',
                 "ui-front-static",
                 "ui-front-nginx",
                 "ui-front-zuul",
@@ -139,10 +138,33 @@ function genGuideSideBar(language) {
             ]
         },
         {
+            title:language?"代码说明":"Code Analysis",
+            collapsable:false,
+            children:[
+                "springfox-swagger",
+                "swaggerbootstrapui"
+            ]
+        },
+        {
             title: "FAQ",
             collapsable: false,
             children: [
-                "donate"
+                "springboot-404",
+                "md-format-error",
+                "springmvc-404",
+                "springmvc-notshow",
+                "upload-error",
+                "format-exception",
+                "swagger-des-not-found",
+                "sp-nmerror"
+            ]
+        },
+        {
+            title: language?"支持":"Support",
+            collapsable: false,
+            children: [
+                "donate",
+                "starts"
             ]
         }
     ]

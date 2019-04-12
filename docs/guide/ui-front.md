@@ -1,3 +1,5 @@
+# 说明
+
 `swagger-bootstrap-ui`自`1.9.2`版本后,提供了前后端分离的解决方案,目前主要有以下几种方式：
 
 - [基于Swagger JSON静态文件的文档预览](ui-front-static.md)

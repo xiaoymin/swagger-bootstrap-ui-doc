@@ -1,3 +1,5 @@
+# java.lang.NumberFormatException: For input string: ""
+
 很多朋友在升级Springfox-Swagger到2.9.2版本后会碰见NumberFormatException异常**java.lang.NumberFormatException: For input string: ""**
 
 异常信息如下：
