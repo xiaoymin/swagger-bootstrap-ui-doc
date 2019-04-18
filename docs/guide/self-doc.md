@@ -19,13 +19,20 @@
 比如`api.md`文档：
 
 ```markdown
-## 获取用户列表
+# 自定义文档说明
 
-access_token是公众号的全局唯一接口调用凭据，公众号调用各接口时都需使用access_token。开发者需要进行妥善保存。access_token的存储至少要保留512个字符空间。access_token的有效期目前为2个小时，需定时刷新，重复获取将导致上次获取的access_token失效
+## 效果说明
 
+在`1.9.3`版本中,`swagger-bootstrap-ui`为了满足文档的个性化配置,添加了自定义文档功能
+
+开发者可自定义`md`文件扩展补充整个系统的文档说明
+
+开发者可以在当前项目中添加一个文件夹，文件夹中存放`.md`格式的markdown文件,每个`.md`文档代表一份自定义文档说明
+
+**注意**：自定义文档说明必须以`.md`结尾的文件,其他格式文件会被忽略
 ```
 
-最终在`swagger-bootstrap-ui`的界面中,`api.md`的文档标题会是`获取用户列表`
+最终在`swagger-bootstrap-ui`的界面中,`api.md`的文档标题会是`自定义文档说明`
 
 整个文档效果如下：
 
@@ -72,9 +79,8 @@ public class SwaggerConfiguration {
 
 ### Spring MVC环境
 
-在Spring MVC环境中,需要在Spring的XML配置文件中注入`MarkdownFiles`类的实例bean
+在Spring MVC环境中,首先引入swagger-bootstrap-ui的jar包文件
 
-首先引入swagger-bootstrap-ui的jar包文件
 ```xml
 <dependency>
   <groupId>com.github.xiaoymin</groupId>
@@ -82,6 +88,7 @@ public class SwaggerConfiguration {
   <version>1.9.3</version>
 </dependency>
 ```
+然后,需要在Spring的XML配置文件中注入`MarkdownFiles`类的实例bean
 
 如下：
 

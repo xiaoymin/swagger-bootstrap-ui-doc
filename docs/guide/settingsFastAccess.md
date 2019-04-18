@@ -30,6 +30,8 @@ B：好的~~!!（PS:就不能直接给弄好吗? o(╥﹏╥)o）
 
 ## 个性化配置参数说明
 
+- i18n国际化支持:`lang=en`  lang可选择：中文(zh)、English(en)
+
 - 开启请求参数缓存：`cache=1`
 
 - 菜单Api地址显示: `showMenuApi=1`
