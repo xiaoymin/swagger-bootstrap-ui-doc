@@ -116,7 +116,7 @@ function genGuideSideBar(language) {
         {
             title: language ? "特点" : "Feature",
             collapsable: false,
-            children: ["ui-style", "offline-md", "fullsearch", "fullparams", "authorize","enh-func","settings"]
+            children: ["ui-style", "offline-md", "fullsearch", "fullparams", "authorize","enh-func","settings","self-doc"]
         },
         {
             title: language ? "默认规则说明" : "Default Rule",
