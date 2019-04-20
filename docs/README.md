@@ -16,6 +16,9 @@ footer: Apache License 2.0 | Copyright © 2019-八一菜刀
 
 ###  当前最新版本
 
+[![star](https://gitee.com/xiaoym/swagger-bootstrap-ui/badge/star.svg?theme=white)](https://gitee.com/xiaoym/swagger-bootstrap-ui/stargazers)
+[![fork](https://gitee.com/xiaoym/swagger-bootstrap-ui/badge/fork.svg?theme=white)](https://gitee.com/xiaoym/swagger-bootstrap-ui/members)
+
 ```xml
 <dependency>
   <groupId>com.github.xiaoymin</groupId>
