@@ -31,3 +31,9 @@ footer: Apache License 2.0 | Copyright © 2019-八一菜刀
 
 ![](img/s6.png)
 ![](img/s7.png)
+
+### 关注 & 交流
+
+关注我的微信公众号,实时了解`swagger-bootstrap-ui`的最新资讯~~~~
+
+![](img/wechat.png)
