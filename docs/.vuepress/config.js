@@ -122,6 +122,7 @@ function genGuideSideBar(language) {
             title: language ? "默认规则说明" : "Default Rule",
             collapsable: false,
             children: [
+                "upgrade",
                 "fieldSort",
                 "accessControl",
                 "downloadAndPreview",
