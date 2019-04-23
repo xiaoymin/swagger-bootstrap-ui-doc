@@ -183,7 +183,9 @@ function genChangeLogSideBar() {
         {
             title:"发布日志",
             collapsable:false,
-            children:["2019-04-08-swagger-bootstrap-ui-1.9.2-issue",
+            children:[
+                "2019-04-23-swagger-bootstrap-ui-1.9.3-issue",
+                "2019-04-08-swagger-bootstrap-ui-1.9.2-issue",
                 "2019-03-11-swagger-bootstrap-ui-1.9.1-issue",
                 "2019-02-25-swagger-bootstrap-ui-1.9.0-issue",
                 "2019-01-11-swagger-bootstrap-ui-1.8.9-issue",
