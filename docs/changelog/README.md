@@ -1,6 +1,7 @@
 ----
 | 新闻标题                                                     | 发布时间   |
 | ------------------------------------------------------------ | ---------- |
+| [swagger-bootstrap-ui 1.9.3 发布，i18n及自定义文档支持](https://www.oschina.net/news/106165/swagger-bootstrap-ui-1-9-3-released) | 2019-04-23 |
 | [swagger-bootstrap-ui 1.9.2 发布，提供前后端分离解决方案](https://www.oschina.net/news/105744/swagger-bootstrap-ui-1-9-2-released) | 2019-04-08 |
 | [swagger-bootstrap-ui 1.9.1 发布,优化大数据响应接口](https://www.oschina.net/news/105067/swagger-bootstrap-ui-1-9-1-released) | 2019-03-11 |
 | [swagger-bootstrap-ui 1.9.0 发布,提供Swagger资源保护](https://www.oschina.net/news/104687/swagger-bootstrap-ui-1-9-0-released) | 2019-02-25 |
