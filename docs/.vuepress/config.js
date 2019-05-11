@@ -49,6 +49,12 @@ module.exports = {
                   // 这里的'/' 指的是 docs文件夹路径
                   // [以 '/' 结尾的默认指向该路径下README.md文件]
                   { text: '指南', link: '/guide/' },
+                  { text: '解决方案', items:[
+                      {text:'前后端分离(swagger-bootstrap-ui-front)',link:'/solution/front/'},
+                      {text:'Chrome扩展程序(swagger-bootstrap-ui-extension)',link:'/solution/extension/'},
+                      {text:'Swagger服务接口(swagger-bootstrap-ui-service)',link:'/solution/service/'},
+                      {text:'Swagger管理平台(swagger-bootstrap-ui-admin)',link:'/solution/admin/'}
+                  ] },
                   { text: '更新日志', link: '/changelog/' },
                   {
                       text: '代码托管',
@@ -57,6 +63,9 @@ module.exports = {
                           { text: 'Gitee', link: 'https://gitee.com/xiaoym/swagger-bootstrap-ui' }
                       ]
                   },
+                  {
+                      text:'赞助',link:'/donate/'
+                  }
               ],
               // 侧边栏菜单( 一个模块对应一个菜单形式 )
               sidebar:{
@@ -213,6 +222,27 @@ function genChangeLogSideBar() {
                 "2017-05-14-swagger-bootstrap-ui-1.2-issue",
                 "2017-04-27-swagger-bootstrap-ui-1.1-issue",
                 "2017-04-19-swagger-bootstrap-ui-open"]
+        }
+    ]
+
+}
+
+/***
+ * 前端解决方案
+ */
+function genSolutionFront(language) {
+
+    return [
+        {
+            title: language ? "前后端分离" : "Front and back end",
+            collapsable: false,
+            children: [
+                'ui-front',
+                "ui-front-static",
+                "ui-front-nginx",
+                "ui-front-zuul",
+                "ui-front-gateway"
+            ]
         }
     ]
 
