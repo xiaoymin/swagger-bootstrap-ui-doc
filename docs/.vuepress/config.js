@@ -49,13 +49,9 @@ module.exports = {
                   // 这里的'/' 指的是 docs文件夹路径
                   // [以 '/' 结尾的默认指向该路径下README.md文件]
                   { text: '指南', link: '/guide/' },
-                  { text: '解决方案', items:[
-                      {text:'前后端分离(swagger-bootstrap-ui-front)',link:'/solution/front/'},
-                      {text:'Chrome扩展程序(swagger-bootstrap-ui-extension)',link:'/solution/extension/'},
-                      {text:'Swagger服务接口(swagger-bootstrap-ui-service)',link:'/solution/service/'},
-                      {text:'Swagger管理平台(swagger-bootstrap-ui-admin)',link:'/solution/admin/'}
-                  ] },
+                  { text: '解决方案', link: '/solution/' },
                   { text: '更新日志', link: '/changelog/' },
+                  { text: '源码分析', link: 'https://www.xiaominfo.com/2019/05/20/springfox-0/' },
                   {
                       text: '代码托管',
                       items: [
@@ -71,6 +67,7 @@ module.exports = {
               sidebar:{
                   // 打开guide主页链接时生成下面这个菜单
                   '/guide/':genGuideSideBar(true),
+                  '/solution/':genSolutionFront(),
                   "/changelog/":genChangeLogSideBar()
               }
           },
@@ -230,11 +227,11 @@ function genChangeLogSideBar() {
 /***
  * 前端解决方案
  */
-function genSolutionFront(language) {
+function genSolutionFront() {
 
     return [
         {
-            title: language ? "前后端分离" : "Front and back end",
+            title: "前后端分离",
             collapsable: false,
             children: [
                 'ui-front',
@@ -242,6 +239,27 @@ function genSolutionFront(language) {
                 "ui-front-nginx",
                 "ui-front-zuul",
                 "ui-front-gateway"
+            ]
+        },
+        {
+            title: "Chrome扩展",
+            collapsable: false,
+            children: [
+                'extension'
+            ]
+        },
+        {
+            title: "Swagger服务接口",
+            collapsable: false,
+            children: [
+                'service'
+            ]
+        },
+        {
+            title: "Swagger管理平台",
+            collapsable: false,
+            children: [
+                'admin'
             ]
         }
     ]
