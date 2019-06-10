@@ -195,6 +195,7 @@ function genChangeLogSideBar() {
             title:"发布日志",
             collapsable:false,
             children:[
+                "2019-06-10-swagger-bootstrap-ui-1.9.4-issue",
                 "2019-04-23-swagger-bootstrap-ui-1.9.3-issue",
                 "2019-04-08-swagger-bootstrap-ui-1.9.2-issue",
                 "2019-03-11-swagger-bootstrap-ui-1.9.1-issue",
