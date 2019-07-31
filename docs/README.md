@@ -23,7 +23,7 @@ footer: Apache License 2.0 | Copyright © 2019-八一菜刀
 <dependency>
   <groupId>com.github.xiaoymin</groupId>
   <artifactId>swagger-bootstrap-ui</artifactId>
-  <version>1.9.3</version>
+  <version>1.9.5</version>
 </dependency>
 ```
 

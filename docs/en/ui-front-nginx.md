@@ -1,12 +1,12 @@
 # Nginx Proxy
 
-在静态部署预览Swagger JSON章节中我们已经讲过如何通过nginx来部署静态文件预览文档，但此时我们会发现存在一个问题，即无法进行接口的调试。
+In the section of static deployment preview Swagger JSON, we have talked about how to deploy static file preview documents through nginx, but at this point we will find a problem, that is, the interface can not be debugged.
 
-我们借助于nginx的反向代理功能,帮助我们实现接口的调试功能
+With the help of the reverse proxy function of nginx, we can realize the debugging function of the interface.
 
-假设还是提供静态JSON的方式,我们只需要在nginx的配置节点中添加一层location即可
+Assuming that static JSON is still available, we only need to add a layer of location to the configuration node of nginx.
 
-如下：
+like：
 
 ```shell
 server {
@@ -15,10 +15,10 @@ server {
         #charset koi8-r;
 
         location / {
-            root /mnt/application/swagger-static;
+            root /mnt/application/swagger-bootstrap-ui-front;
         }
         location /api/ {
-        	// Swagger JSON文件中所有以api开头的接口全部走8999的代理
+        	// proxy api server
             proxy_pass http://127.0.0.1:8999/api/;
             client_max_body_size   200m;
         }
@@ -26,21 +26,21 @@ server {
     }
 ```
 
-通过以上配置,我们即可预览及调试我们的接口文档
+With the above configuration, we can preview and debug our interface documents.
 
-**但是**
+**But**
 
-我们又会发现问题,很多时候,我们所写的接口可能并不规范,并非所有的接口都是以/api开头的,或者以固定的其他格式开头的接口,那此时如果我们以上面的配置方式来配置,当我们的接口以`/admin/test`这种形式出现时,我们就无法调试该接口
+We will also find the problem. Many times, the interfaces we write may not be standardized. Not all interfaces start with / api, or with fixed other formats. If we configure the interfaces above, we will not be able to adjust them when our interfaces appear in the form of `admin / test'. Try this interface
 
-那或许我们可以换一种方式,我们将该服务下的所有接口理解为一个服务,我们给一个服务取一个特点的名称,然后通过聚合服务的方式,将文档聚合显示出来,这样既可进行调试
+Maybe we can change the way we think of all interfaces under this service as a service. We give a service a characteristic name, and then aggregate the documents by aggregating the services so that it can be debugged.
 
-例如：
+for example：
 
-将`127.0.0.1:8999`理解为`service1`
+Understand `127.0.0.1:8999'` as `service 1`
 
-我们在访问该服务的接口时加上服务前缀：`/service1/api/xxx`,此时,不管我们的接口又多么不规范,只要是service1下的接口,nginx都会将它转发到`127.0.0.1:8999`这台服务上,这样我们也完成了接口的调试
+When we access the interface of the service, we add the service prefix: `service 1/api/xxx`. At this time, no matter how irregular our interface is, as long as it is the interface under service 1, nginx will forward it to `127.0.0.1:8999', so that we have completed the debugging of the interface.
 
-nginx配置：
+nginx conf：
 
 ```json
 server {
@@ -63,23 +63,23 @@ server {
     }
 ```
 
-很显然,通过以上配置,最终能达到我们的预期,但是在我们的文档界面中,没有`service1`这样的basePath属性供我们配置,此时,我们应该如何处理
+Obviously, through the above configuration, we can finally achieve our expectations, but in our document interface, there is no `service1'basePath attribute for us to configure, at this time, how should we deal with it?
 
-针对这种情况，`swagger-bootstrap-ui`在分组属性中,扩展了一个`basePath`属性值
+In this case, `swagger-bootstrap-ui` extends a `basePath attribute value in the grouping attribute.
 
-此时，我们的`group.json`文件如下：
+our `group.json` file like this：
 
 ```json
 [
   {
-    "name": "微服务-用户模块",
+    "name": "user-service",
     "url": "/service1/v2/api-docs?group=分组接口",
     "swaggerVersion": "2.0",
     "location": "/service1/v2/api-docs?group=分组接口",
     "basePath":"/service1"
   },
   {
-    "name": "微服务-订单模块",
+    "name": "order-service",
     "url": "/service2/v2/api-docs?group=默认接口",
     "swaggerVersion": "2.0",
     "location": "/service2/v2/api-docs?group=默认接口",
@@ -88,11 +88,11 @@ server {
 ]
 ```
 
-此时,我们的Swagger的JSON路径地址,我们也可以使用我们服务提供给我们的接口地址，只需要加上为服务名称,分组名称即可得到该服务的Swagger JSON文件
+At this point, our Swagger JSON path address, we can also use our service to provide us with the interface address, just add the name of the service, the group name can get the Swagger JSON file of the service.
 
-通过这种方式,我们可以在`group.json`文件中聚合所有后端的Swagger服务接口,最终一致输出显示
+In this way, we can aggregate all back-end Swagger service interfaces in the `group.json` file and eventually output consistent display.
 
-效果如下：
+effect：
 
 ![](/images/front-1.png)
 

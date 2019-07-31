@@ -1,17 +1,17 @@
 # Static Swagger JSON
 
-基于静态Swagger JSON文件的方式预览很简单,首先需要一个HTTP的web服务即可
+Preview based on static Swagger JSON file is simple. First, you need an HTTP web service.
 
-两种选择：
+Two options:
 
 - Nginx
 - IIS
 
-不管是基于nginx还是IIS，首先都需要先本地生成一个静态的Swagger JSON文件结构
+Whether it's based on nginx or IIS, you first need to generate a static swagger JSON file structure locally.
 
-`swagger-bootstrap-ui`此处提供了一个简单的示例
+`swagger-bootstrap-ui` A simple example is provided here.
 
-修改项目json目录下的`group.json`
+Modify `group.json'in the project JSON directory`
 
 ```json
 [
@@ -30,9 +30,10 @@
 ]
 ```
 
-我们在静态的`group.json`文件中预定义了两个静态的swagger JSON文件,也同时存放在json文件夹中
+We predefined two static swagger JSON files in the static `group.json` file and stored them in the JSON folder at the same time.
 
-`swagger.json`的内容为swagger接口`/v2/api-docs`中响应的内容
+ 
+The content of ` swagger.json` is the content of the response in the swagger interface `v2/api-docs`.
 
 ```json
 {
@@ -40,7 +41,7 @@
   "info": {
     "description": "<div style='font-size:14px;color:red;'>swagger-bootstrap-ui-demo RESTful APIs</div>",
     "version": "1.0",
-    "title": "swagger-bootstrap-ui很棒~~~！！！",
+    "title": "swagger-bootstrap-ui is great~~~！！！",
     "termsOfService": "http://www.group.com/",
     "contact": {
       "name": "group@qq.com"
@@ -52,13 +53,13 @@
 }
 ```
 
-当我们完成以上步骤后,即可通过nginx或者IIS部署静态文件浏览我们的接口文档了
+When we have completed the above steps, we can browse our interface documents through nginx or IIS deployment static files.
 
-## 基于nginx
+## nginx
 
-基于nginx的方式,只需要将`swagger-bootstrap-ui`的所有静态文件拷贝到响应目录,然后再nginx的conf配置文件中配置server节点即可
+In the nginx-based way, you only need to copy all the static files of `swagger-bootstrap-ui-front` to the response directory, and then configure the server node in the conf configuration file of nginx.
 
-参考信息如下：
+like ：
 
 ```shell
 server {
@@ -67,20 +68,20 @@ server {
         #charset koi8-r;
 
         location / {
-            #此处为swagger-bootstrap-ui项目中resources目录中的静态资源;
-            root /mnt/application/swagger-static;
+            # ui location;
+            root /mnt/application/swagger-bootstrap-ui-front;
         }
 
     }
 
 ```
 
-## 基于IIS
+## IIS
 
-在Windows系统中,可以使用IIS部署我们的静态站点,快速预览Swagger文档
+In Windows, we can deploy our static site using IIS to quickly preview Swagger documents.
 
-具体路径：
+Specific path：
 
-控制面板 -> 管理工具 -> Internet Information Services (IIS)管理器 -> 添加网站 -> 选择静态目录 -> 浏览
+Control Panel - > Management Tool - > Internet Information Services (IIS) Manager - > Add Website - > Select Static Directory - > Browse
 
-如果没有IIS管理器,你首先需要自行安装该服务,至于如何安装IIS,自行搜索解决,此处不再骜述.
+If there is no IIS manager, you need to install the service by yourself first. As for how to install IIS and search for solutions by yourself, I will not elaborate here.

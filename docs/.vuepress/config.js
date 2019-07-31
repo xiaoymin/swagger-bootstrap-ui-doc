@@ -127,7 +127,7 @@ function genGuideSideBar(language) {
                 "authorize","enh-func",
                 "settings",
                 "version-control","self-doc","i18n",
-            "dynamic-parameter"]
+            "dynamic-parameter","dynamicResponse","ignoreParameter"]
         },
         {
             title: language ? "默认规则说明" : "Default Rule",
