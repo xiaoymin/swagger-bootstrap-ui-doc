@@ -51,6 +51,7 @@ module.exports = {
                   { text: '指南', link: '/guide/' },
                   { text: '解决方案', link: '/solution/' },
                   { text: '更新日志', link: '/changelog/' },
+                  { text: 'FAQ', link: '/faq/' },
                   { text: '源码分析', link: 'https://www.xiaominfo.com/2019/05/20/springfox-0/' },
                   {
                       text: '代码托管',
@@ -68,7 +69,8 @@ module.exports = {
                   // 打开guide主页链接时生成下面这个菜单
                   '/guide/':genGuideSideBar(true),
                   '/solution/':genSolutionFront(),
-                  "/changelog/":genChangeLogSideBar()
+                  "/changelog/":genChangeLogSideBar(),
+                  "/faq/":genFaqSideBar()
               }
           },
           '/en/':{
@@ -184,6 +186,25 @@ function genGuideSideBar(language) {
         }
     ]
 
+}
+
+function genFaqSideBar() {
+    return [
+        {
+            title:"FAQ",
+            collapsable:false,
+            children:[
+                "swaggerResourceInvalid",
+                "format-exception",
+                "md-format-error",
+                "sp-nmerror",
+                "springboot-404",
+                "springmvc-404",
+                "springmvc-notshow",
+                "swagger-des-not-found",
+                "upload-error"]
+        }
+    ]
 }
 
 /***
