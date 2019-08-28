@@ -49,6 +49,7 @@ module.exports = {
                   // 这里的'/' 指的是 docs文件夹路径
                   // [以 '/' 结尾的默认指向该路径下README.md文件]
                   { text: '指南', link: '/guide/' },
+                  { text: 'knife4j', link: '/knife4j/' },
                   { text: '解决方案', link: '/solution/' },
                   { text: '更新日志', link: '/changelog/' },
                   { text: 'FAQ', link: '/faq/' },
@@ -68,6 +69,7 @@ module.exports = {
               sidebar:{
                   // 打开guide主页链接时生成下面这个菜单
                   '/guide/':genGuideSideBar(true),
+                  '/knife4j/':genKnife4jFront(),
                   '/solution/':genSolutionFront(),
                   "/changelog/":genChangeLogSideBar(),
                   "/faq/":genFaqSideBar()
@@ -216,6 +218,7 @@ function genChangeLogSideBar() {
             title:"发布日志",
             collapsable:false,
             children:[
+                "2019-08-28-swagger-bootstrap-ui-1.9.6-issue",
                 "2019-07-31-swagger-bootstrap-ui-1.9.5-issue",
                 "2019-06-10-swagger-bootstrap-ui-1.9.4-issue",
                 "2019-04-23-swagger-bootstrap-ui-1.9.3-issue",
@@ -250,6 +253,32 @@ function genChangeLogSideBar() {
         }
     ]
 
+}
+
+function genKnife4jFront() {
+    return [
+        {
+            title: "Chrome扩展",
+            collapsable: false,
+            children: [
+                'extension'
+            ]
+        },
+        {
+            title: "Swagger服务接口",
+            collapsable: false,
+            children: [
+                'service'
+            ]
+        },
+        {
+            title: "Swagger管理平台",
+            collapsable: false,
+            children: [
+                'admin'
+            ]
+        }
+    ]
 }
 
 /***
