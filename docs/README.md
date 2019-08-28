@@ -1,7 +1,7 @@
 ---
 home: true
-heroText: swagger-bootstrap-ui
-tagline: 一款不一样的swagger-ui
+heroText: knife4j
+tagline: knife4j是为Java MVC框架集成Swagger生成Api文档的增强解决方案
 actionText: 快速开始 →
 actionLink: /guide/
 features:
@@ -14,7 +14,17 @@ features:
 footer: Apache License 2.0 | Copyright © 2019-八一菜刀
 ---
 
-###  当前最新版本
+### 重大说明
+
+`swagger-bootstrap-ui`的最后一个版本是`1.9.6`,已更名为`knife4j`
+
+knife4j是为Java MVC框架集成Swagger生成Api文档的增强解决方案,前身是`swagger-bootstrap-ui`,取名kni4j是希望她能像一把匕首一样小巧,轻量,并且功能强悍!
+
+
+后续版本请使用knife4j,关于knife4j的使用方法请[参考文档](/knife4j/)
+
+
+###  swagger-bootstrap-ui的最后一个版本
 
 [![star](https://gitee.com/xiaoym/swagger-bootstrap-ui/badge/star.svg?theme=white)](https://gitee.com/xiaoym/swagger-bootstrap-ui/stargazers)
 [![fork](https://gitee.com/xiaoym/swagger-bootstrap-ui/badge/fork.svg?theme=white)](https://gitee.com/xiaoym/swagger-bootstrap-ui/members)
@@ -23,7 +33,7 @@ footer: Apache License 2.0 | Copyright © 2019-八一菜刀
 <dependency>
   <groupId>com.github.xiaoymin</groupId>
   <artifactId>swagger-bootstrap-ui</artifactId>
-  <version>1.9.5</version>
+  <version>1.9.6</version>
 </dependency>
 ```
 

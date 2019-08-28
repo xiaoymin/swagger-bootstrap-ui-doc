@@ -1,6 +1,6 @@
 module.exports = {
-    title: 'swagger-bootstrap-ui', // 页签标题 : A001_VuePress博客搭建的简单教程&问题分析 # | Wiki 1001
-    description: 'swagger-bootstrap-ui 用户指南', // meta 中的描述文字，意义不大，SEO用
+    title: 'knife4j', // 页签标题 : A001_VuePress博客搭建的简单教程&问题分析 # | Wiki 1001
+    description: 'knife4j 用户指南', // meta 中的描述文字，意义不大，SEO用
     // 注入到当前页面的 HTML <head> 中的标签
     head: [
         // 增加一个自定义的 favicon(网页标签的图标)
@@ -15,13 +15,13 @@ module.exports = {
         // 作为特例，默认语言可以使用 '/' 作为其路径。
         '/': {
             lang: 'zh-CN',
-            title: 'swagger-bootstrap-ui',
-            description: 'swagger-bootstrap-ui 指南'
+            title: 'knife4j',
+            description: 'knife4j 指南'
         },
         '/en/': {
             lang: 'en-US', // 将会被设置为 <html> 的 lang 属性
-            title: 'swagger-bootstrap-ui',
-            description: 'swagger-bootstrap-ui Guide'
+            title: 'knife4j',
+            description: 'knife4j Guide'
         }
 
     },
