@@ -26,8 +26,8 @@ knife4j是为Java MVC框架集成Swagger生成Api文档的增强解决方案,前
 
 ###  swagger-bootstrap-ui的最后一个版本
 
-[![star](https://gitee.com/xiaoym/swagger-bootstrap-ui/badge/star.svg?theme=white)](https://gitee.com/xiaoym/swagger-bootstrap-ui/stargazers)
-[![fork](https://gitee.com/xiaoym/swagger-bootstrap-ui/badge/fork.svg?theme=white)](https://gitee.com/xiaoym/swagger-bootstrap-ui/members)
+[![star](https://gitee.com/xiaoym/knife4j/badge/star.svg?theme=white)](https://gitee.com/xiaoym/knife4j/stargazers)
+[![fork](https://gitee.com/xiaoym/knife4j/badge/fork.svg?theme=white)](https://gitee.com/xiaoym/knife4j/members)
 
 ```xml
 <dependency>

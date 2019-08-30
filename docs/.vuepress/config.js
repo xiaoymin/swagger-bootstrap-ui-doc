@@ -57,8 +57,8 @@ module.exports = {
                   {
                       text: '代码托管',
                       items: [
-                          { text: 'GitHub', link: 'https://github.com/xiaoymin/Swagger-Bootstrap-UI' },
-                          { text: 'Gitee', link: 'https://gitee.com/xiaoym/swagger-bootstrap-ui' }
+                          { text: 'GitHub', link: 'https://github.com/xiaoymin/swagger-bootstrap-ui' },
+                          { text: 'Gitee', link: 'https://gitee.com/xiaoym/knife4j' }
                       ]
                   },
                   {
@@ -95,8 +95,8 @@ module.exports = {
                   {
                       text: 'Code',
                       items: [
-                          { text: 'GitHub', link: 'https://github.com/xiaoymin/Swagger-Bootstrap-UI' },
-                          { text: 'Gitee', link: 'https://gitee.com/xiaoym/swagger-bootstrap-ui' }
+                          { text: 'GitHub', link: 'https://github.com/xiaoymin/swagger-bootstrap-ui' },
+                          { text: 'Gitee', link: 'https://gitee.com/xiaoym/knife4j' }
                       ]
                   },
               ],
