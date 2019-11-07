@@ -81,6 +81,7 @@ public class ServiceServerApplication {
     <scope>test</scope>
 </dependency>
 <dependency>
+
     <groupId>com.github.xiaoymin</groupId>
     <artifactId>knife4j-micro-spring-boot-starter</artifactId>
 </dependency>
